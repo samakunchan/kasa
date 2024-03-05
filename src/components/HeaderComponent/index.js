@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/svg/logo-red.svg';
 
 const HeaderComponent = () => (
-  <header>
+  <header className='header'>
     <img src={logo} alt='Logo du site' />
-    <div>
+    <nav className='nav'>
       <ul>
         <li>
           <Link to='/'>Accueil</Link>
@@ -13,7 +13,7 @@ const HeaderComponent = () => (
           <Link to='/a-propos'>A propos</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 );
 

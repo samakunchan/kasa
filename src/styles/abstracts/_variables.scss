@@ -1,0 +1,20 @@
+// Colours
+$primary: #FF6060;
+$secondary: #F9F9FC;
+$tertiary: #C4C4C4;
+$backgroundLight: #F9F9FC;
+$backgroundDark: #000000;
+$shadow: #666666;
+
+// Typography
+$fontWeightTitle: 700;
+$fontWeightNormal: 500;
+$fontMontserrat: 'Montserrat', Arial, Helvetica, sans-serif;
+$fontMSourceCodePro: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+/// Break points
+$breakpoints: (
+        'small': (min-width: 768px),
+        'medium': (min-width: 1024px),
+        'large': (min-width: 1440px),
+);

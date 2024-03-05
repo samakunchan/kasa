@@ -1,13 +1,8 @@
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-}
+// Default Styles
+@import "styles/base";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+// Components
+@import "components/HeaderComponent";
+
+// Pages
+@import "pages/ErrorPage";
