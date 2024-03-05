@@ -1,0 +1,11 @@
+@use "../abstracts";
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: abstracts.$backgroundDark;
+  font-weight: abstracts.$fontWeightTitle;
+}
