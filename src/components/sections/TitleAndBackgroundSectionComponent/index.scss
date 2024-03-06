@@ -1,0 +1,25 @@
+@use "../../../styles/abstracts";
+
+.section-title-and-bg {
+  //background: url("../../../assets/images/image-source-1.png") center/cover no-repeat;
+  height: 15em;
+  border-radius: 1.5em;
+  box-shadow: 1px 3px 2px abstracts.$shadow;
+  margin: 1em 0;
+  overflow: hidden;
+
+  .layer-on-bg{
+    background-color: rgba(0, 0, 0, 0.52);
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      text-align: center;
+      color: abstracts.$secondary;
+      font-size: 2.5em;
+    }
+  }
+}
