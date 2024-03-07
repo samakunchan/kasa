@@ -1,0 +1,15 @@
+@use "../../../styles/abstracts";
+
+.section-gallery {
+  background-color: abstracts.$backgroundGallery;
+  border-radius: 1.5em;
+  padding: 1.5em;
+  .card-layout {
+    max-width: 100%;
+    margin: 0 auto;
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
