@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
  * Créer une section avec un titre et un background
  * @param title {String} Un titre court
  * @param sourceImage {String} Sans slash, sans rien d'autres. Ex: "`image-source-1.png`"
- * @return {JSX.Element}
+ * @return {JSX.Element<SectionTitleAndBackgroundComponent>}
  * @constructor
  */
-const TitleAndBackgroundSectionComponent = ({ title, sourceImage }) => {
+const SectionTitleAndBackgroundComponent = ({ title, sourceImage }) => {
   return (
     <section
       className='section-title-and-bg'
@@ -23,14 +23,14 @@ const TitleAndBackgroundSectionComponent = ({ title, sourceImage }) => {
   );
 };
 
-TitleAndBackgroundSectionComponent.propTypes = {
+SectionTitleAndBackgroundComponent.propTypes = {
   title: PropTypes.string,
   sourceImage: PropTypes.string,
 };
 
-TitleAndBackgroundSectionComponent.defaultProps = {
+SectionTitleAndBackgroundComponent.defaultProps = {
   title: 'Ajouter votre texte ici',
   sourceImage: 'image-source-1.png',
 };
 
-export default TitleAndBackgroundSectionComponent;
+export default SectionTitleAndBackgroundComponent;

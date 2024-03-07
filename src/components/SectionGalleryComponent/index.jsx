@@ -1,8 +1,8 @@
 import './index.scss';
 import { useEffect, useState } from 'react';
-import CardComponent from '../../CardComponent';
-import { LogementModel } from '../../../core/models/logement-model';
-import { getLogements } from '../../../core/services/logementService';
+import CardComponent from '../CardComponent';
+import { LogementModel } from '../../core/models/logement-model';
+import { getLogements } from '../../core/services/logementService';
 
 /**
  * Construit les cards
@@ -18,12 +18,12 @@ const buildCardForLogement = ({ id, title, cover }, index) => (
 
 /**
  * Composant de la Gallery
- * @return {JSX.Element<GallerySectionComponent>}
+ * @return {JSX.Element<SectionGalleryComponent>}
  * @constructor
  */
-const GallerySectionComponent = () => {
+const SectionGalleryComponent = () => {
   const fakeArrayForCards = Array.of(...Array(5).keys()).map((_, index) => ({
-    id: index,
+    id: index.toString(),
     title: 'Titre de la location',
   }));
 
@@ -45,4 +45,4 @@ const GallerySectionComponent = () => {
   );
 };
 
-export default GallerySectionComponent;
+export default SectionGalleryComponent;
