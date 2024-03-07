@@ -1,20 +1,44 @@
 import './index.scss';
+import { useEffect, useState } from 'react';
+import CardComponent from '../../CardComponent';
+import { LogementModel } from '../../../core/models/logement-model';
+import { getLogements } from '../../../core/services/logementService';
 
+/**
+ * Construit les cards
+ * @param id {String} Ex: '1fe56z'
+ * @param title {String} Ex: 'https://.../image.png'
+ * @param cover {String} Ex: 'un titre'
+ * @param index {number} Ex: 1
+ * @return {JSX.Element<CardComponent>}
+ */
+const buildCardForLogement = ({ id, title, cover }, index) => (
+  <CardComponent key={index} id={id} title={title} src={cover} />
+);
+
+/**
+ * Composant de la Gallery
+ * @return {JSX.Element<GallerySectionComponent>}
+ * @constructor
+ */
 const GallerySectionComponent = () => {
-  const img =
-    'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg';
-  const fakeArrayForCards = Array.of(...Array(5).keys());
+  const fakeArrayForCards = Array.of(...Array(5).keys()).map((_, index) => ({
+    id: index,
+    title: 'Titre de la location',
+  }));
+
+  const [logements, setLogements] = useState(LogementModel.emptyLogements);
+  useEffect(() => {
+    getLogements().then(setLogements);
+  }, []);
+
   return (
     <section className={'section-gallery'}>
       <div className={'card-layout'}>
         <div className={'card-container'}>
-          {fakeArrayForCards.map((data, index) => (
-            <div key={index} className={'card'}>
-              <div className={'intercalaire'}></div>
-              <img src={img} alt={`Salon cozy`} />
-              <h3>Titre de la location</h3>
-            </div>
-          ))}
+          {logements.length !== 0
+            ? logements.map(buildCardForLogement)
+            : fakeArrayForCards.map(buildCardForLogement)}
         </div>
       </div>
     </section>
