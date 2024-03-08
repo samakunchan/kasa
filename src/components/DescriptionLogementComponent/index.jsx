@@ -1,4 +1,5 @@
 import './index.scss';
+import BlockTitleSubtitle from '../BlockTitleSubtitle';
 import PropTypes from 'prop-types';
 
 /**
@@ -8,7 +9,11 @@ import PropTypes from 'prop-types';
  * @constructor
  */
 const DescriptionLogementComponent = ({ logement }) => {
-  return <section>Description</section>;
+  return (
+    <section>
+      <BlockTitleSubtitle title={logement.title} location={logement.location} />
+    </section>
+  );
 };
 
 DescriptionLogementComponent.propType = {

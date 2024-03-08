@@ -1,0 +1,13 @@
+@use "src/styles/abstracts";
+
+.title {
+  color: abstracts.$primary;
+  font-weight: 500;
+  font-size: 1.85em;
+  margin: 0;
+}
+
+p {
+  margin: 6px 0;
+  font-weight: 700;
+}
