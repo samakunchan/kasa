@@ -3,7 +3,7 @@
 .card {
   cursor: pointer;
   background-color: abstracts.$primary;
-  border-radius: .5em;
+  @include abstracts.borderRadiumSmall;
   flex-basis: 30.3333%;
   margin: 1.3333%;
   min-height: 360px;

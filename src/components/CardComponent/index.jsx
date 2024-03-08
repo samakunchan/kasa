@@ -1,4 +1,5 @@
 import './index.scss';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 /**
@@ -10,12 +11,19 @@ import PropTypes from 'prop-types';
  * @constructor
  */
 const CardComponent = ({ id, src, title }) => {
+  const slug = title
+    .trim()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .split(' ')
+    .join('-');
   return (
-    <div className={'card'}>
+    <Link to={`/logements-${id}-${slug}`} className={'card'}>
       <div className={'intercalaire'}></div>
       {src && <img src={src} alt={title} />}
       <h3>{title}</h3>
-    </div>
+    </Link>
   );
 };
 
