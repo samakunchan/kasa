@@ -3,7 +3,7 @@
 .section-title-and-bg {
   //background: url("../../../assets/images/image-source-1.png") center/cover no-repeat;
   height: 15em;
-  border-radius: 1.5em;
+  @include abstracts.borderRadiumMedium;
   box-shadow: 1px 3px 2px abstracts.$shadow;
   margin: 1em 0;
   overflow: hidden;
