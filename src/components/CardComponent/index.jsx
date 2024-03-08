@@ -1,6 +1,7 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { getSlug } from '../../core/utils/utils';
 
 /**
  * Composant d'une Card
@@ -11,15 +12,8 @@ import PropTypes from 'prop-types';
  * @constructor
  */
 const CardComponent = ({ id, src, title }) => {
-  const slug = title
-    .trim()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .split(' ')
-    .join('-');
   return (
-    <Link to={`/logements-${id}-${slug}`} className={'card'}>
+    <Link to={`/logement/${id}/${getSlug(title)}`} className={'card'}>
       <div className={'intercalaire'}></div>
       {src && <img src={src} alt={title} />}
       <h3>{title}</h3>
