@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import CarouselComposant from '../../components/CarouselComposant';
+import DescriptionLogementComponent from '../../components/DescriptionLogementComponent';
 import { LogementModel } from '../../core/models/logement-model';
 import { getOneLogement } from '../../core/services/logementService';
 import { useParams } from 'react-router-dom';
@@ -21,10 +22,12 @@ const DetailsLogementPage = () => {
   }, [id]);
 
   return (
-    <div>
-      {logement && <CarouselComposant pictures={logement.pictures} title={logement.title} />}
-      <div>{logement && logement.title}</div>
-    </div>
+    logement && (
+      <div>
+        <CarouselComposant pictures={logement.pictures} title={logement.title} />
+        <DescriptionLogementComponent logement={logement} />
+      </div>
+    )
   );
 };
 
