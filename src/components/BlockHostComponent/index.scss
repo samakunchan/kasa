@@ -1,0 +1,19 @@
+@use "src/styles/abstracts";
+
+.host {
+  display: flex;
+  align-items: center;
+  .block-name {
+    text-align: right;
+    position: relative;
+    right: 1em;
+  }
+  p {
+    color: abstracts.$primary;
+    font-weight: 500;
+  }
+  img {
+    border-radius: 50%;
+    width: 69px;
+  }
+}
