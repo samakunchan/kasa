@@ -13,9 +13,7 @@ import { useParams } from 'react-router-dom';
 const DetailsLogementPage = () => {
   const [logement, setLogement] = useState(LogementModel.emptyLogement);
 
-  const { slug } = useParams();
-  const partial = slug.split('-');
-  const id = partial[1];
+  const { id } = useParams();
 
   useEffect(() => {
     getOneLogement(id).then(setLogement);
