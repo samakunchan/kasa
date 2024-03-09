@@ -13,3 +13,9 @@ export const getSlug = title =>
     .toLowerCase()
     .split(' ')
     .join('-');
+
+/**
+ * Total : 5
+ * @type {number}
+ */
+export const maximumStars = 5;
