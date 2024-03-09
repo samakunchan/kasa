@@ -1,6 +1,6 @@
 import './index.scss';
 import { useEffect, useState } from 'react';
-import CardComponent from '../CardComponent';
+import BlockCardComponent from '../BlockCardComponent';
 import { LogementModel } from '../../core/models/logement-model';
 import { getLogements } from '../../core/services/logementService';
 
@@ -10,10 +10,10 @@ import { getLogements } from '../../core/services/logementService';
  * @param title {String} Ex: 'https://.../image.png'
  * @param cover {String} Ex: 'un titre'
  * @param index {number} Ex: 1
- * @return {JSX.Element<CardComponent>}
+ * @return {JSX.Element<BlockCardComponent>}
  */
 const buildCardForLogement = ({ id, title, cover }, index) => (
-  <CardComponent key={index} id={id} title={title} src={cover} />
+  <BlockCardComponent key={index} id={id} title={title} src={cover} />
 );
 
 /**

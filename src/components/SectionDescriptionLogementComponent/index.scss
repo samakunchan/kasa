@@ -1,0 +1,14 @@
+.description-logement {
+  .title-and-host, .tag-and-rating {
+    display: flex;
+    justify-content: space-between;
+  }
+  .block {
+    margin: 1em 0;
+  }
+  .accordions-disposition {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5em;
+  }
+}

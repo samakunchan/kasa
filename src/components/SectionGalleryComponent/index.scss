@@ -2,7 +2,7 @@
 
 .section-gallery {
   background-color: abstracts.$backgroundGallery;
-  border-radius: 1.5em;
+  @include abstracts.borderRadiumMedium;
   padding: 1.5em;
   .card-layout {
     max-width: 100%;

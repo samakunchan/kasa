@@ -99,4 +99,11 @@ export class LogementModel {
   static get emptyLogements() {
     return [];
   }
+
+  /**
+   * @return {LogementModel}
+   */
+  static get emptyLogement() {
+    return null;
+  }
 }

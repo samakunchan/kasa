@@ -1,0 +1,14 @@
+@use "src/styles/abstracts";
+
+.tags {
+  display: flex;
+  p {
+    margin: 0 .5em 0 0;
+    padding: 10px 1em;
+    background-color: abstracts.$primary;
+    color: abstracts.$backgroundLight;
+    min-width: 8em;
+    text-align: center;
+    @include abstracts.borderRadiumMedium
+  }
+}
