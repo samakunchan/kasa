@@ -1,5 +1,6 @@
 import './index.scss';
 import BlockHostComponent from '../BlockHostComponent';
+import BlockTagComponent from '../BlockTagComponent';
 import BlockTitleSubtitle from '../BlockTitleSubtitle';
 import PropTypes from 'prop-types';
 
@@ -12,8 +13,13 @@ import PropTypes from 'prop-types';
 const SectionDescriptionLogementComponent = ({ logement }) => {
   return (
     <section className={'description-logement'}>
-      <BlockTitleSubtitle title={logement.title} location={logement.location} />
-      <BlockHostComponent name={logement.host.name} picture={logement.host.picture} />
+      <div className='title-host'>
+        <BlockTitleSubtitle title={logement.title} location={logement.location} />
+        <BlockHostComponent name={logement.host.name} picture={logement.host.picture} />
+      </div>
+      <div className='tag-stars'>
+        <BlockTagComponent tags={logement.tags} />
+      </div>
     </section>
   );
 };

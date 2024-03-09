@@ -1,4 +1,6 @@
 .description-logement {
-  display: flex;
-  justify-content: space-between;
+  .title-host, .tag-stars {
+    display: flex;
+    justify-content: space-between;
+  }
 }
