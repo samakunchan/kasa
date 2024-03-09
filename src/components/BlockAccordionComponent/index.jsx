@@ -23,7 +23,9 @@ const BlockAccordionComponent = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+    if (content !== undefined) {
+      setIsOpen(!isOpen);
+    }
   };
 
   const src = isOpen ? arrowUp : arrowDown;
