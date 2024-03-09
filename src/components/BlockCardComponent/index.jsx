@@ -8,10 +8,10 @@ import { getSlug } from '../../core/utils/utils';
  * @param id {String} Ex: '1fe56z'
  * @param src {String} Ex: 'https://.../image.png'
  * @param title {String} Ex: 'un titre'
- * @return {JSX.Element<CardComponent>}
+ * @return {JSX.Element<BlockCardComponent>}
  * @constructor
  */
-const CardComponent = ({ id, src, title }) => {
+const BlockCardComponent = ({ id, src, title }) => {
   return (
     <Link to={`/logement/${id}/${getSlug(title)}`} className={'card'}>
       <div className={'intercalaire'}></div>
@@ -21,10 +21,10 @@ const CardComponent = ({ id, src, title }) => {
   );
 };
 
-CardComponent.propTypes = {
+BlockCardComponent.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   src: PropTypes.string,
 };
 
-export default CardComponent;
+export default BlockCardComponent;

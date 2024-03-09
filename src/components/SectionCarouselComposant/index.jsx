@@ -10,10 +10,10 @@ import { useState } from 'react';
  * Créer le composant Carousel
  * @param pictures {String[]}
  * @param title {String}
- * @return {JSX.Element<CarouselComposant>}
+ * @return {JSX.Element<SectionCarouselComposant>}
  * @constructor
  */
-const CarouselComposant = ({ pictures, title }) => {
+const SectionCarouselComposant = ({ pictures, title }) => {
   const ifIsEmpty = pictures.length === 0;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -48,8 +48,8 @@ const CarouselComposant = ({ pictures, title }) => {
   );
 };
 
-CarouselComposant.propType = {
+SectionCarouselComposant.propType = {
   pictures: PropTypes.array.isRequired,
   title: PropTypes.array.isRequired,
 };
-export default CarouselComposant;
+export default SectionCarouselComposant;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import CarouselComposant from '../../components/CarouselComposant';
-import DescriptionLogementComponent from '../../components/DescriptionLogementComponent';
 import { LogementModel } from '../../core/models/logement-model';
+import SectionCarouselComposant from '../../components/SectionCarouselComposant';
+import SectionDescriptionLogementComponent from '../../components/SectionDescriptionLogementComponent';
 import { getOneLogement } from '../../core/services/logementService';
 import { useParams } from 'react-router-dom';
 
@@ -22,8 +22,8 @@ const DetailsLogementPage = () => {
   return (
     logement && (
       <div>
-        <CarouselComposant pictures={logement.pictures} title={logement.title} />
-        <DescriptionLogementComponent logement={logement} />
+        <SectionCarouselComposant pictures={logement.pictures} title={logement.title} />
+        <SectionDescriptionLogementComponent logement={logement} />
       </div>
     )
   );

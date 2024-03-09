@@ -4,12 +4,12 @@ import BlockTitleSubtitle from '../BlockTitleSubtitle';
 import PropTypes from 'prop-types';
 
 /**
- * Créer le composant DescriptionLogementComponent de la page détail
+ * Créer le composant SectionDescriptionLogementComponent de la page détail
  * @param logement {LogementModel}
- * @return {JSX.Element}
+ * @return {JSX.Element<SectionDescriptionLogementComponent>}
  * @constructor
  */
-const DescriptionLogementComponent = ({ logement }) => {
+const SectionDescriptionLogementComponent = ({ logement }) => {
   return (
     <section className={'description-logement'}>
       <BlockTitleSubtitle title={logement.title} location={logement.location} />
@@ -18,8 +18,8 @@ const DescriptionLogementComponent = ({ logement }) => {
   );
 };
 
-DescriptionLogementComponent.propType = {
+SectionDescriptionLogementComponent.propType = {
   logement: PropTypes.object.isRequired,
 };
 
-export default DescriptionLogementComponent;
+export default SectionDescriptionLogementComponent;
