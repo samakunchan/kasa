@@ -6,7 +6,7 @@
     "static/media/image-carousel-1-large.png": "/static/media/image-carousel-1-large.3700af3c27bd444c2508.png",
     "static/media/logo-red.svg": "/static/media/logo-red.a5c76d8a1dac09edd59db36304e0bcfa.svg",
     "static/media/logo-white.svg": "/static/media/logo-white.e3cc7d0afee8182b2149c5a84b731a57.svg",
-    "index.html": "/kasa/index.html",
+    "index.html": "/index.html",
     "static/media/star-empty.svg": "/static/media/star-empty.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
     "static/media/star-full.svg": "/static/media/star-full.30b8963e66a47777ef47296f505567be.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.7392cfef895f3f08eb15338d5beccf79.svg",
@@ -17,5 +17,8 @@
     "main.fac672f4.js.map": "/static/js/main.fac672f4.js.map",
     "453.9701a2b0.chunk.js.map": "/static/js/453.9701a2b0.chunk.js.map"
   },
-  "entrypoints": ["static/css/main.52ccf8c2.css", "static/js/main.fac672f4.js"]
+  "entrypoints": [
+    "static/css/main.52ccf8c2.css",
+    "static/js/main.fac672f4.js"
+  ]
 }
