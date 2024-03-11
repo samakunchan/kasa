@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import arrowLeft from '../../assets/svg/arrow-left.svg';
 import arrowRight from '../../assets/svg/arrow-right.svg';
 import imageCarouselLarge from '../../assets/images/image-carousel-1-large.png';
-// import imageCarouselSmall from '../../assets/images/image-carousel-1-small.png';
 import { useState } from 'react';
 
 /**

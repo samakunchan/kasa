@@ -1,3 +1,4 @@
+@use "./animations";
 @use "./variables";
 
 /// Responsive breakpoint manager
@@ -32,4 +33,18 @@
 /// @access public
 @mixin borderRadiumHigh {
   border-radius: variables.$defaultHighRadius;
+}
+
+/// @access public
+@mixin openAccordion {
+  max-height: 300px;
+  opacity: 1;
+  animation: slide-down variables.$defaultDurationAnimation ease-out forwards;
+}
+
+/// @access public
+@mixin closeAccordion {
+  max-height: 0;
+  opacity: 0;
+  animation: slide-up variables.$defaultDurationAnimation ease-out forwards;
 }

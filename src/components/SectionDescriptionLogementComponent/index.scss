@@ -1,14 +1,33 @@
+@use "src/styles/abstracts";
+
 .description-logement {
-  .title-and-host, .tag-and-rating {
+  .description-container {
+    @include abstracts.respond-to('small') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .host-and-rating-disposition {
+    text-align: right;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
+    @include abstracts.respond-to('small') {
+      display: unset;
+    }
   }
   .block {
     margin: 1em 0;
   }
   .accordions-disposition {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5em;
+    @include abstracts.respond-to('small') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4em;
+    }
+    .accordion {
+      margin: 1em 0;
+    }
   }
 }

@@ -3,12 +3,14 @@
 .tags {
   display: flex;
   p {
+    font-size: 14px;
+    font-weight: 700;
     margin: 0 .5em 0 0;
-    padding: 10px 1em;
+    padding: 7px 1em;
     background-color: abstracts.$primary;
     color: abstracts.$backgroundLight;
     min-width: 8em;
     text-align: center;
-    @include abstracts.borderRadiumMedium
+    @include abstracts.borderRadiumSmall
   }
 }

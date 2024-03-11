@@ -2,6 +2,7 @@ import './index.scss';
 import { useEffect, useState } from 'react';
 import BlockCardComponent from '../BlockCardComponent';
 import { LogementModel } from '../../core/models/logement-model';
+import { defaultCardText } from '../../core/utils/utils';
 import { getLogements } from '../../core/services/logementService';
 
 /**
@@ -24,7 +25,7 @@ const buildCardForLogement = ({ id, title, cover }, index) => (
 const SectionGalleryComponent = () => {
   const fakeArrayForCards = Array.of(...Array(5).keys()).map((_, index) => ({
     id: index.toString(),
-    title: 'Titre de la location',
+    title: defaultCardText,
   }));
 
   const [logements, setLogements] = useState(LogementModel.emptyLogements);

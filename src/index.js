@@ -13,12 +13,12 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <Router>
+    <Router basename={`/kasa`}>
       <HeaderComponent />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/a-propos' element={<AboutPage />} />
-        <Route path='/logement/:id/:slug' element={<DetailsLogementPage />} />
+        <Route path='/:id/:slug' element={<DetailsLogementPage />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
       <FooterComponent />

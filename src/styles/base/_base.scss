@@ -11,5 +11,6 @@ a {
 }
 
 section {
-  margin: 1em 0;
+  max-width: abstracts.$large_value;
+  margin: 1em auto;
 }

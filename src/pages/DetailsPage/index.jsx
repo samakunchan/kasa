@@ -21,7 +21,7 @@ const DetailsLogementPage = () => {
 
   return (
     logement && (
-      <div>
+      <div className='App'>
         <SectionCarouselComposant pictures={logement.pictures} title={logement.title} />
         <SectionDescriptionLogementComponent logement={logement} />
       </div>

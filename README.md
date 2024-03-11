@@ -6,7 +6,7 @@
 Projet 11 Openclassrooms. <br>
 Site Internet d'une agence immobilière qui était anciennement sur ASP.NET qui est refais avec NodeJS en back en ReactJS en front.
 
-[Cliquez pour voir la maquette Figmat](https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?type=design&node-id=0-1&mode=design&t=1KgUwWWFtuAVbsJ5-0)
+[Cliquez pour voir la maquette Figma](https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?type=design&node-id=0-1&mode=design&t=1KgUwWWFtuAVbsJ5-0)
 <br>
 (NB : La maquette peut évoluer avec le temps.)
 

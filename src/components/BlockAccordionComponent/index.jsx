@@ -1,7 +1,6 @@
 import './index.scss';
 import PropTypes from 'prop-types';
-import arrowDown from '../../assets/svg/arrow-down.svg';
-import arrowUp from '../../assets/svg/arrow-up.svg';
+import defaultArrow from '../../assets/svg/arrow-up.svg';
 import { useState } from 'react';
 
 /**
@@ -23,21 +22,26 @@ const BlockAccordionComponent = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+    if (content !== undefined) {
+      setIsOpen(!isOpen);
+    }
   };
 
-  const src = isOpen ? arrowUp : arrowDown;
   const alt = `Fleche vers le ${isOpen ? 'haut' : 'bas'}`;
 
   return (
     <div className='accordion'>
-      <div className='header-accordion-disposition' onClick={toggleAccordion}>
+      <div className={`header-accordion-disposition`} onClick={toggleAccordion}>
         <h4>{title}</h4>
-        <img src={src} alt={alt} />
+        <img className={`${isOpen && 'rotated'}`} src={defaultArrow} alt={alt} />
       </div>
-      {isOpen && typeof content === 'string' && <p className='accordion-content'>{content}</p>}
-      {isOpen && Array.isArray(content) && (
-        <ul className='accordion-content'>{content.map(buildListEquipment)}</ul>
+      {typeof content === 'string' && (
+        <p className={`para-accordion-content ${isOpen ? 'is-open' : 'is-closed'}`}>{content}</p>
+      )}
+      {Array.isArray(content) && (
+        <ul className={`list-accordion-content ${isOpen ? 'is-open' : 'is-closed'}`}>
+          {content.map(buildListEquipment)}
+        </ul>
       )}
       {content === undefined && <p className='accordion-content'>Aucun renseignement fournis</p>}
     </div>

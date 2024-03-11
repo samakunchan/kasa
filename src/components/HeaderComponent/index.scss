@@ -1,13 +1,27 @@
+@use "src/styles/abstracts";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
+  padding: 1em;
+  max-width: abstracts.$large_value;
+  margin: 0 auto;
   .nav {
     ul {
       display: flex;
       justify-content: space-around;
       width: 13em;
+      a {
+        text-transform: uppercase;
+        font-weight: 500;
+        &.active {
+          border-bottom: solid .15rem;
+        }
+        @include abstracts.respond-to('small') {
+          text-transform: none;
+        }
+      }
     }
   }
 }

@@ -6,10 +6,16 @@ export class ErrorModel {
     this._message = message;
   }
 
+  /**
+   * @return {number}
+   */
   get statusCode() {
     return this._statusCode;
   }
 
+  /**
+   * @return {String}
+   */
   get message() {
     return this._message;
   }
