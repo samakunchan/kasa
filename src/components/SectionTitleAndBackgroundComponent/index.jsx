@@ -2,6 +2,13 @@ import './index.scss';
 import PropTypes from 'prop-types';
 
 /**
+ * Créer l'url du background
+ * @param sourceImage {String}
+ * @return {`url(/kasa/images/${string}) center/cover no-repeat`}
+ */
+const bgUrl = sourceImage => `url(/kasa/images/${sourceImage}) center/cover no-repeat`;
+
+/**
  * Créer une section avec un titre et un background
  * @param title {String} Un titre court
  * @param sourceImage {String} Sans slash, sans rien d'autres. Ex: "`image-source-1.png`"
@@ -13,7 +20,7 @@ const SectionTitleAndBackgroundComponent = ({ title, sourceImage }) => {
     <section
       className='section-title-and-bg'
       style={{
-        background: `url(/images/${sourceImage}) center/cover no-repeat`,
+        background: bgUrl(sourceImage),
       }}
     >
       <div className={'layer-on-bg'}>
