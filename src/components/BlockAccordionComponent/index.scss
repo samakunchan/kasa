@@ -28,7 +28,10 @@
     position: relative;
     top: -3px;
     z-index: -1;
-    padding: 1.5em 1.5em;
+    padding: .5em 1.5em;
+    @include abstracts.respond-to('small') {
+      padding: 1.5em 1.5em;
+    }
     line-height: 1.7em;
     font-weight: 500;
     overflow: hidden;
