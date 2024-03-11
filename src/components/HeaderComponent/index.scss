@@ -1,8 +1,12 @@
+@use "src/styles/abstracts";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 0;
+  max-width: abstracts.$large_value;
+  margin: 0 auto;
   .nav {
     ul {
       display: flex;
