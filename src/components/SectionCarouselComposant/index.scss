@@ -2,7 +2,7 @@
 
 .carousel {
   position: relative;
-  height: 500px;
+  height: 400px;
  .carousel-container {
    height: 100%;
    img{
@@ -34,6 +34,12 @@
    }
    &.next {
      right: 0;
+   }
+   img {
+     width: 20px;
+     @include abstracts.respond-to('small') {
+       width: unset;
+     }
    }
  }
 }

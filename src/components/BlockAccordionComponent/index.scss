@@ -2,6 +2,7 @@
 
 .accordion {
   .header-accordion-disposition {
+    cursor: pointer;
     background-color: abstracts.$primary;
     @include abstracts.borderRadiumSmall;
     color: abstracts.$backgroundLight;
