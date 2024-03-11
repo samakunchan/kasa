@@ -16,9 +16,13 @@
     img {
       cursor: pointer;
       width: 20px;
+      transition: transform abstracts.$defaultDurationAnimation ease-in-out;
+      &.rotated {
+        transform: rotate(-180deg);
+      }
     }
   }
-  .accordion-content{
+  .para-accordion-content, .list-accordion-content{
     margin: 0;
     background-color: abstracts.$secondary;
     position: relative;
@@ -27,5 +31,13 @@
     padding: 1.5em 1.5em;
     line-height: 1.7em;
     font-weight: 500;
+    overflow: hidden;
+    transition: max-height abstracts.$defaultDurationAnimation ease-out, opacity abstracts.$defaultDurationAnimation ease-out;
+    &.is-open {
+      @include abstracts.openAccordion
+    }
+    &.is-closed {
+      @include abstracts.closeAccordion
+    }
   }
 }
