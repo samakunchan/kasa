@@ -10,4 +10,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  img {
+    width: 12em;
+    @include abstracts.respond-to('small') {
+      width: unset;
+    }
+  }
+  p {
+    width: 150px;
+    @include abstracts.respond-to('small') {
+      width: unset;
+    }
+  }
 }

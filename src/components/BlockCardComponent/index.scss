@@ -2,23 +2,27 @@
 
 .card {
   cursor: pointer;
-  background-color: abstracts.$primary;
-  @include abstracts.borderRadiumSmall;
+  @include abstracts.borderRadiumMedium;
   flex-basis: 30.3333%;
   margin: 1.3333%;
   min-height: 360px;
   position: relative;
   z-index: 1;
+  &.default-color {
+    background-color: abstracts.$primary;
+  }
   .intercalaire {
     position: absolute;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+    @include abstracts.borderRadiumMedium;
   }
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include abstracts.borderRadiumMedium;
   }
   h3 {
     position: absolute;

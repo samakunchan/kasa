@@ -11,7 +11,7 @@ const AboutPage = () => (
   <div>
     <SectionTitleAndBackgroundComponent title={''} sourceImage={'image-source-2.png'} />
     <section className={'accordion-about'}>
-      <BlockAccordionComponent title={'Fiabilité'} />
+      <BlockAccordionComponent title={'Fiabilité'} content={''} />
       <BlockAccordionComponent title={'Respect'} content={''} />
       <BlockAccordionComponent title={'Service'} content={''} />
       <BlockAccordionComponent title={'Sécurité'} content={''} />

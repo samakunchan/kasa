@@ -13,12 +13,15 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    @include abstracts.respond-to('small') {
+      justify-content: center;
+    }
 
     h2 {
-      text-align: center;
       color: abstracts.$secondary;
       font-size: 2.5em;
+      padding: 0 1em;
     }
   }
 }

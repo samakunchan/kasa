@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
  */
 const BlockCardComponent = ({ id, src, title }) => {
   return title === defaultCardText ? (
-    <div className={'card'}>
+    <div className={'card default-color'}>
       <div className={'intercalaire'}></div>
       {src && <img src={src} alt={title} />}
       <h3>{title}</h3>
