@@ -1,5 +1,10 @@
+@use "src/styles/abstracts";
+
 .accordion-about {
   .accordion {
-    margin: 1em 6em;
+    margin: 1.5em 0;
+    @include abstracts.respond-to('small') {
+      margin: 1.5em 6em;
+    }
   }
 }
