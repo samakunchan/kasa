@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kasa/static/css/main.345d30e1.css",
-    "main.js": "/kasa/static/js/main.b90ab39a.js",
+    "main.css": "/kasa/static/css/main.926a7719.css",
+    "main.js": "/kasa/static/js/main.e2a050ae.js",
     "static/js/453.9701a2b0.chunk.js": "/kasa/static/js/453.9701a2b0.chunk.js",
     "static/media/image-carousel-1-large.png": "/kasa/static/media/image-carousel-1-large.3700af3c27bd444c2508.png",
     "static/media/logo-red.svg": "/kasa/static/media/logo-red.a5c76d8a1dac09edd59db36304e0bcfa.svg",
@@ -12,12 +12,12 @@
     "static/media/arrow-up.svg": "/kasa/static/media/arrow-up.574227c1ca3bbfe1a74a469a82b713bc.svg",
     "static/media/arrow-right.svg": "/kasa/static/media/arrow-right.88153a5d119c2744ffe34dca1ef843df.svg",
     "static/media/arrow-left.svg": "/kasa/static/media/arrow-left.19918a1634b1441a25ae0b50e6b1f85b.svg",
-    "main.345d30e1.css.map": "/kasa/static/css/main.345d30e1.css.map",
-    "main.b90ab39a.js.map": "/kasa/static/js/main.b90ab39a.js.map",
+    "main.926a7719.css.map": "/kasa/static/css/main.926a7719.css.map",
+    "main.e2a050ae.js.map": "/kasa/static/js/main.e2a050ae.js.map",
     "453.9701a2b0.chunk.js.map": "/kasa/static/js/453.9701a2b0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.345d30e1.css",
-    "static/js/main.b90ab39a.js"
+    "static/css/main.926a7719.css",
+    "static/js/main.e2a050ae.js"
   ]
 }
