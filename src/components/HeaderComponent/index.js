@@ -3,7 +3,9 @@ import logo from '../../assets/svg/logo-red.svg';
 
 const HeaderComponent = () => (
   <header className='header'>
-    <img src={logo} alt='Logo du site' />
+    <Link to={'/'}>
+      <img src={logo} alt='Logo du site' />
+    </Link>
     <nav className='nav'>
       <ul>
         <li>
