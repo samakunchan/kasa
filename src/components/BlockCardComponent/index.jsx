@@ -1,7 +1,7 @@
 import './index.scss';
+import { defaultCardText, getSlug } from '../../core/utils/utils';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { getSlug } from '../../core/utils/utils';
 
 /**
  * Composant d'une Card
@@ -12,7 +12,13 @@ import { getSlug } from '../../core/utils/utils';
  * @constructor
  */
 const BlockCardComponent = ({ id, src, title }) => {
-  return (
+  return title === defaultCardText ? (
+    <div className={'card'}>
+      <div className={'intercalaire'}></div>
+      {src && <img src={src} alt={title} />}
+      <h3>{title}</h3>
+    </div>
+  ) : (
     <Link to={`/logement/${id}/${getSlug(title)}`} className={'card'}>
       <div className={'intercalaire'}></div>
       {src && <img src={src} alt={title} />}

@@ -19,3 +19,9 @@ export const getSlug = title =>
  * @type {number}
  */
 export const maximumStars = 5;
+
+/**
+ * "Titre de la section"
+ * @type {string}
+ */
+export const defaultCardText = 'Titre de la section';
