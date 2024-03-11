@@ -2,9 +2,9 @@
 
 .accordion-about {
   .accordion {
-    margin: 1.5em 0;
+    margin: 0;
     @include abstracts.respond-to('small') {
-      margin: 1.5em 6em;
+      margin: 0 6em;
     }
   }
 }
