@@ -19,7 +19,7 @@ const BlockCardComponent = ({ id, src, title }) => {
       <h3>{title}</h3>
     </div>
   ) : (
-    <Link to={`/logement/${id}/${getSlug(title)}`} className={'card'}>
+    <Link to={`/${id}/${getSlug(title)}`} className={'card'}>
       <div className={'intercalaire'}></div>
       {src && <img src={src} alt={title} />}
       <h3>{title}</h3>
