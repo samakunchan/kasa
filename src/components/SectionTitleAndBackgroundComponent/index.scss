@@ -13,7 +13,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     @include abstracts.respond-to('small') {
       justify-content: center;
     }

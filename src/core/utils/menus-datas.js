@@ -8,7 +8,7 @@ export const menusDatas = [
   {
     label: 'Accueil',
     path: '/',
-    isActive: true,
+    isActive: false,
   },
   {
     label: 'A propos',

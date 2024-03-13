@@ -1,26 +1,23 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../core/utils/theme-provider';
 import logo from '../../assets/svg/logo-red.svg';
 import { menusDatas } from '../../core/utils/menus-datas';
-import { useState } from 'react';
+import { useContext } from 'react';
 
 const HeaderComponent = () => {
-  const menuHome = menusDatas.find(({ path }) => path === '/');
-
-  const setState = useState(null);
-
-  const isMenuActive = index => {
-    menusDatas.forEach(menu => (menu.isActive = false));
-    menusDatas[index].isActive = true;
-    setState[1]([]);
-  };
+  const { indexMenuActive, changeIndexMenuActive } = useContext(ThemeContext);
+  menusDatas.forEach(menu => (menu.isActive = false));
+  if (indexMenuActive !== -1) {
+    menusDatas[indexMenuActive].isActive = true;
+  }
 
   const buildMenus = (menu, index) => (
     <li key={index}>
       <Link
         to={menu.path}
         className={menu.isActive ? 'active' : ''}
-        onClick={() => isMenuActive(index)}
+        onClick={() => changeIndexMenuActive(index)}
       >
         {menu.label}
       </Link>
@@ -29,7 +26,7 @@ const HeaderComponent = () => {
 
   return (
     <header className='header'>
-      <Link to={menuHome.path}>
+      <Link to={'/'} onClick={() => changeIndexMenuActive(0)}>
         <img src={logo} alt='Logo du site' />
       </Link>
       <nav className='nav'>

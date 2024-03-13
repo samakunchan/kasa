@@ -1,4 +1,4 @@
-import { ErrorModel } from '../models/error-model';
+// import { ErrorModel } from '../models/error-model';
 import { LogementModel } from '../models/logement-model';
 
 /**
@@ -6,11 +6,11 @@ import { LogementModel } from '../models/logement-model';
  * @return {Promise<LogementModel[]>}
  */
 export const getLogements = () => {
-  return fetch('/kasa/datas/logements.json')
+  return fetch('/datas/logements.json')
     .then(response => response.json())
     .then(response => response.map(datas => new LogementModel(datas)))
-    .catch(error => {
-      console.error(new ErrorModel({ message: error.message }));
+    .catch(() => {
+      // console.error(new ErrorModel({ message: error.message }));
       return LogementModel.emptyLogements;
     });
 };
@@ -21,12 +21,12 @@ export const getLogements = () => {
  * @return {Promise<LogementModel>}
  */
 export const getOneLogement = id => {
-  return fetch('/kasa/datas/logements.json')
+  return fetch('/datas/logements.json')
     .then(response => response.json())
     .then(response => response.map(datas => new LogementModel(datas)))
     .then(response => response.find(datas => datas.id === id))
-    .catch(error => {
-      console.error(new ErrorModel({ message: error.message }));
+    .catch(() => {
+      // console.error(new ErrorModel({ message: error.message }));
       return LogementModel.emptyLogements;
     });
 };

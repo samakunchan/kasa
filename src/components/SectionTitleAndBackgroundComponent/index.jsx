@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 /**
  * Créer l'url du background
  * @param sourceImage {String}
- * @return {`url(/kasa/images/${string}) center/cover no-repeat`}
+ * @return {`url(/images/${string}) center/cover no-repeat`}
  */
-const bgUrl = sourceImage => `url(/kasa/images/${sourceImage}) center/cover no-repeat`;
+const bgUrl = sourceImage => `url(/images/${sourceImage}) center/cover no-repeat`;
 
 /**
  * Créer une section avec un titre et un background

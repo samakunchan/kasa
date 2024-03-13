@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { LogementModel } from '../../core/models/logement-model';
 import SectionCarouselComposant from '../../components/SectionCarouselComposant';
 import SectionDescriptionLogementComponent from '../../components/SectionDescriptionLogementComponent';
 import { getOneLogement } from '../../core/services/logementService';
-import { useParams } from 'react-router-dom';
 
 /**
  * Affiche le détail d'un logement à partir d'un id param de l'url
@@ -11,13 +11,20 @@ import { useParams } from 'react-router-dom';
  * @constructor
  */
 const DetailsLogementPage = () => {
+  const navigate = useNavigate();
   const [logement, setLogement] = useState(LogementModel.emptyLogement);
 
   const { id } = useParams();
 
   useEffect(() => {
-    getOneLogement(id).then(setLogement);
-  }, [id]);
+    getOneLogement(id).then(logement => {
+      if (logement === undefined) {
+        navigate('/error');
+      } else {
+        setLogement(logement);
+      }
+    });
+  }, [id, navigate]);
 
   return (
     logement && (

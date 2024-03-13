@@ -20,9 +20,12 @@
   }
   img {
     width: 100%;
-    height: 100%;
+    height: 380px;
     object-fit: cover;
     @include abstracts.borderRadiumMedium;
+    @include abstracts.respond-to('small') {
+      height: 100%;
+    }
   }
   h3 {
     position: absolute;
