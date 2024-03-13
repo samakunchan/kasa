@@ -1,7 +1,7 @@
 @use "src/styles/abstracts";
 
 .error {
-  color: red;
+  color: abstracts.$primary;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9,7 +9,10 @@
   h1 {
     text-align: center;
     font-weight: abstracts.$fontWeightTitle;
-    font-size: 15em;
+    font-size: 9em;
+    @include abstracts.respond-to('small') {
+      font-size: 15em;
+    }
     margin: .5em;
   }
   p, .link {
@@ -17,10 +20,14 @@
     margin: 2em 0;
   }
   p {
-    font-size: 2em;
+    font-size: 1.8em;
+    @include abstracts.respond-to('small') {
+      font-size: 2em;
+    }
   }
   .link {
     display: flex;
     justify-content: center;
+    border-bottom: solid .15rem;
   }
 }
