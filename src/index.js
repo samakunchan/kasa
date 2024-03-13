@@ -1,5 +1,5 @@
 import './index.scss';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
 import DetailsLogementPage from './pages/DetailsPage';
 import ErrorPage from './pages/ErrorPage';
@@ -8,22 +8,26 @@ import HeaderComponent from './components/HeaderComponent';
 import HomePage from './pages/HomePage';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import ThemeProvider from './core/utils/theme-provider';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
-    <Router basename={`/kasa`}>
-      <HeaderComponent />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/a-propos' element={<AboutPage />} />
-        <Route path='/:id/:slug' element={<DetailsLogementPage />} />
-        <Route path='*' element={<ErrorPage />} />
-      </Routes>
-      <FooterComponent />
+  <React.StrictMode>
+    <Router>
+      <ThemeProvider>
+        <HeaderComponent />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/a-propos' element={<AboutPage />} />
+          <Route path='/:id/:slug' element={<DetailsLogementPage />} />
+          <Route path='/page-introuvable' element={<ErrorPage />} />
+          <Route path='*' element={<Navigate to={'/page-introuvable'} replace />} />
+        </Routes>
+        <FooterComponent />
+      </ThemeProvider>
     </Router>
-  </>,
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
