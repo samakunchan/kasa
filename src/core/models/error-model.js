@@ -20,6 +20,10 @@ export class ErrorModel {
     return this._message;
   }
 
+  /**
+   * Retourne le model de l'érreur 404
+   * @return {ErrorModel}
+   */
   static get notFound() {
     return new ErrorModel({ statusCode: 404, message: messageNotFound });
   }
