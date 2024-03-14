@@ -34,7 +34,7 @@ const SectionGalleryComponent = () => {
   }, []);
 
   return (
-    <section className={'section-gallery'}>
+    <section aria-label={'Gallerie'} className={'section-gallery'}>
       <div className={'card-layout'}>
         <div className={'card-container'}>
           {logements.length !== 0

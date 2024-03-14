@@ -18,6 +18,7 @@ const bgUrl = sourceImage => `url(/images/${sourceImage}) center/cover no-repeat
 const SectionTitleAndBackgroundComponent = ({ title, sourceImage }) => {
   return (
     <section
+      aria-label={'Titre et image arrière plan'}
       className='section-title-and-bg'
       style={{
         background: bgUrl(sourceImage),
