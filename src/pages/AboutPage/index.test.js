@@ -16,8 +16,8 @@ describe('Given we are in the about page', () => {
     });
 
     test('Then the section accordion contain the right title', () => {
-      const sections = getAllByRoleSpy('heading');
-      expect(sections).toHaveLength(4);
+      const headers = getAllByRoleSpy('heading');
+      expect(headers).toHaveLength(4);
     });
   });
 });
