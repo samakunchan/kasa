@@ -18,25 +18,22 @@ const bgUrl = sourceImage => `url(/images/${sourceImage}) center/cover no-repeat
 const SectionTitleAndBackgroundComponent = ({ title, sourceImage }) => {
   return (
     <section
+      aria-label={'Titre et image arrière plan'}
       className='section-title-and-bg'
       style={{
         background: bgUrl(sourceImage),
       }}
     >
-      <div className={'layer-on-bg'}>
-        <h2>{title}</h2>
-      </div>
+      <div className={'layer-on-bg'}>{title && <h2>{title}</h2>}</div>
     </section>
   );
 };
 
 SectionTitleAndBackgroundComponent.propTypes = {
-  title: PropTypes.string,
   sourceImage: PropTypes.string,
 };
 
 SectionTitleAndBackgroundComponent.defaultProps = {
-  title: 'Ajouter votre texte ici',
   sourceImage: 'image-source-1.png',
 };
 

@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
  */
 const SectionDescriptionLogementComponent = ({ logement }) => {
   return (
-    <section className={'description-logement'}>
+    <section aria-label={'Description du logement'} className={'description-logement'}>
       <div className='description-container'>
         <div className='title-and-tags-disposition block'>
           <BlockTitleSubtitle title={logement.title} location={logement.location} />

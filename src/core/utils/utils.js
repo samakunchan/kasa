@@ -25,3 +25,19 @@ export const maximumStars = 5;
  * @type {string}
  */
 export const defaultCardText = 'Titre de la section';
+
+export const logementMock = {
+  id: '1',
+  title: 'Logement test',
+  cover: 'pic1.jpg',
+  pictures: ['pic1.jpg', 'pic2.jpg'],
+  description: 'Ceci est un description',
+  host: {
+    name: 'John Doe',
+    picture: '',
+  },
+  rating: '5',
+  location: 'Babeloued',
+  equipments: [],
+  tags: ['petit', 'grand'],
+};

@@ -7,12 +7,9 @@ import { LogementModel } from '../models/logement-model';
  */
 export const getLogements = () => {
   return fetch('/datas/logements.json')
-    .then(response => response.json())
-    .then(response => response.map(datas => new LogementModel(datas)))
-    .catch(() => {
-      // console.error(new ErrorModel({ message: error.message }));
-      return LogementModel.emptyLogements;
-    });
+    .then(getJson)
+    .then(response => mapRecords(response))
+    .catch(catchErrorAndGiveAnEmptyList);
 };
 
 /**
@@ -22,11 +19,43 @@ export const getLogements = () => {
  */
 export const getOneLogement = id => {
   return fetch('/datas/logements.json')
-    .then(response => response.json())
-    .then(response => response.map(datas => new LogementModel(datas)))
-    .then(response => response.find(datas => datas.id === id))
-    .catch(() => {
-      // console.error(new ErrorModel({ message: error.message }));
-      return LogementModel.emptyLogements;
-    });
+    .then(getJson)
+    .then(response => mapRecords(response))
+    .then(response => getOneById(response, id))
+    .catch(catchErrorAndGiveANull);
+};
+
+/**
+ * @param response
+ * @return {Response}
+ */
+const getJson = response => response.json();
+
+/**
+ * @param records
+ * @return {LogementModel[]}
+ */
+const mapRecords = records => records.map(datas => new LogementModel(datas));
+
+/**
+ * @return {LogementModel}
+ * @param response {Record[]}
+ * @param id {string}
+ */
+const getOneById = (response, id) => response.find(datas => datas.id === id);
+
+/**
+ * @return {LogementModel[]}
+ */
+const catchErrorAndGiveAnEmptyList = () => {
+  // console.error(new ErrorModel({ message: error.message }));
+  return LogementModel.emptyLogements;
+};
+
+/**
+ * @return {LogementModel}
+ */
+const catchErrorAndGiveANull = () => {
+  // console.error(new ErrorModel({ message: error.message }));
+  return LogementModel.null;
 };

@@ -1,8 +1,24 @@
 import { render, screen } from '@testing-library/react';
-import Index from './index';
+import HomePage from './index';
 
-test('renders learn react link', () => {
-  render(<Index />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('Given we are in the home page', () => {
+  describe('When HomePage is loaded', () => {
+    let getAllByRoleSpy;
+
+    beforeEach(() => {
+      const { getAllByRole } = render(<HomePage />);
+      getAllByRoleSpy = getAllByRole;
+    });
+
+    test('Then render the page with the correct title', () => {
+      const linkElement = screen.getByText(/Chez vous et partout ailleurs/i);
+      expect(linkElement.parentElement).toHaveClass('layer-on-bg');
+      expect(linkElement).toBeInTheDocument();
+    });
+
+    test('Then render 2 sections only', () => {
+      const sections = getAllByRoleSpy('region');
+      expect(sections.length).toBe(2);
+    });
+  });
 });

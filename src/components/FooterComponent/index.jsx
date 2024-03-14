@@ -3,7 +3,7 @@ import logo from '../../assets/svg/logo-white.svg';
 
 const FooterComponent = () => (
   <footer className='footer'>
-    <img src={logo} alt='Logo du site en noir' />
+    <img src={logo} alt='Logo du site en noir et blanc' />
     <p>© 2024 Kasa. All rights reserved</p>
   </footer>
 );
