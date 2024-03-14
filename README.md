@@ -20,3 +20,7 @@ Site Internet d'une agence immobilière qui était anciennement sur ASP.NET qui 
 
         git clone https://<ACCESS_TOKEN>@github.com/samakunchan/kasa
         npm install
+
+## Test
+
+Voir les rôles pour les tests ici : https://www.w3.org/TR/html-aria/#docconformance
