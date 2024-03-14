@@ -15,7 +15,13 @@ const ErrorPage = ({ errorModel = ErrorModel.notFound }) => {
     <main className='error'>
       <h1>{errorModel.statusCode}</h1>
       <p>{errorModel.message}</p>
-      <Link className='link' to={'/'} onClick={() => changeIndexMenuActive(0)}>
+      <Link
+        className='link'
+        to={'/'}
+        onClick={() => {
+          changeIndexMenuActive(0);
+        }}
+      >
         Retourner sur la page d'accueil
       </Link>
     </main>
