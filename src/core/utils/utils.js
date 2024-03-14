@@ -39,5 +39,5 @@ export const logementMock = {
   rating: '5',
   location: 'Babeloued',
   equipments: [],
-  tags: [],
+  tags: ['petit', 'grand'],
 };
