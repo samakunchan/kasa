@@ -1,6 +1,7 @@
 import './index.scss';
 import BlockAccordionComponent from '../../components/BlockAccordionComponent';
 import SectionTitleAndBackgroundComponent from '../../components/SectionTitleAndBackgroundComponent';
+import { globalMessages } from '../../core/utils/global-messages';
 
 /**
  * Construit la page AboutPage
@@ -12,44 +13,20 @@ const AboutPage = () => (
     <SectionTitleAndBackgroundComponent title={''} sourceImage={'image-source-2.png'} />
     <section className={'accordion-about'}>
       <BlockAccordionComponent
-        title={'Fiabilité'}
-        content={
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
-          'Animi atque doloribus inventore ipsam minus perspiciatis possimus quaerat quam quis quo? ' +
-          'Atque debitis, eaque exercitationem expedita iusto nam odit porro repudiandae sequi ut! ' +
-          'Alias architecto at, facere fugiat harum impedit laborum maiores minima nam natus obcaecati ' +
-          'quae quia quisquam reiciendis, rem.'
-        }
+        title={globalMessages.fiability.title}
+        content={globalMessages.fiability.content}
       />
       <BlockAccordionComponent
-        title={'Respect'}
-        content={
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
-          'Animi atque doloribus inventore ipsam minus perspiciatis possimus quaerat quam quis quo? ' +
-          'Atque debitis, eaque exercitationem expedita iusto nam odit porro repudiandae sequi ut! ' +
-          'Alias architecto at, facere fugiat harum impedit laborum maiores minima nam natus obcaecati ' +
-          'quae quia quisquam reiciendis, rem.'
-        }
+        title={globalMessages.respect.title}
+        content={globalMessages.respect.content}
       />
       <BlockAccordionComponent
-        title={'Service'}
-        content={
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
-          'Animi atque doloribus inventore ipsam minus perspiciatis possimus quaerat quam quis quo? ' +
-          'Atque debitis, eaque exercitationem expedita iusto nam odit porro repudiandae sequi ut! ' +
-          'Alias architecto at, facere fugiat harum impedit laborum maiores minima nam natus obcaecati ' +
-          'quae quia quisquam reiciendis, rem.'
-        }
+        title={globalMessages.service.title}
+        content={globalMessages.service.content}
       />
       <BlockAccordionComponent
-        title={'Sécurité'}
-        content={
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
-          'Animi atque doloribus inventore ipsam minus perspiciatis possimus quaerat quam quis quo? ' +
-          'Atque debitis, eaque exercitationem expedita iusto nam odit porro repudiandae sequi ut! ' +
-          'Alias architecto at, facere fugiat harum impedit laborum maiores minima nam natus obcaecati ' +
-          'quae quia quisquam reiciendis, rem.'
-        }
+        title={globalMessages.security.title}
+        content={globalMessages.security.content}
       />
     </section>
   </div>
