@@ -24,20 +24,16 @@ const SectionTitleAndBackgroundComponent = ({ title, sourceImage }) => {
         background: bgUrl(sourceImage),
       }}
     >
-      <div className={'layer-on-bg'}>
-        <h2>{title}</h2>
-      </div>
+      <div className={'layer-on-bg'}>{title && <h2>{title}</h2>}</div>
     </section>
   );
 };
 
 SectionTitleAndBackgroundComponent.propTypes = {
-  title: PropTypes.string,
   sourceImage: PropTypes.string,
 };
 
 SectionTitleAndBackgroundComponent.defaultProps = {
-  title: 'Ajouter votre texte ici',
   sourceImage: 'image-source-1.png',
 };
 

@@ -10,8 +10,8 @@ import { globalMessages } from '../../core/utils/global-messages';
  */
 const AboutPage = () => (
   <div>
-    <SectionTitleAndBackgroundComponent title={''} sourceImage={'image-source-2.png'} />
-    <section className={'accordion-about'}>
+    <SectionTitleAndBackgroundComponent sourceImage={'image-source-2.png'} />
+    <section aria-label={'Les 4 éléments de qualités'} className={'accordion-about'}>
       <BlockAccordionComponent
         title={globalMessages.fiability.title}
         content={globalMessages.fiability.content}
