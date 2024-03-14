@@ -29,7 +29,7 @@ export const defaultCardText = 'Titre de la section';
 export const logementMock = {
   id: '1',
   title: 'Logement test',
-  cover: '',
+  cover: 'pic1.jpg',
   pictures: ['pic1.jpg', 'pic2.jpg'],
   description: 'Ceci est un description',
   host: {
