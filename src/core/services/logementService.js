@@ -9,7 +9,7 @@ export const getLogements = () => {
   return fetch('/datas/logements.json')
     .then(getJson)
     .then(response => mapRecords(response))
-    .catch(catchError);
+    .catch(catchErrorAndGiveAnEmptyList);
 };
 
 /**
@@ -22,7 +22,7 @@ export const getOneLogement = id => {
     .then(getJson)
     .then(response => mapRecords(response))
     .then(response => getOneById(response, id))
-    .catch(catchError);
+    .catch(catchErrorAndGiveANull);
 };
 
 /**
@@ -47,7 +47,15 @@ const getOneById = (response, id) => response.find(datas => datas.id === id);
 /**
  * @return {LogementModel[]}
  */
-const catchError = () => {
+const catchErrorAndGiveAnEmptyList = () => {
   // console.error(new ErrorModel({ message: error.message }));
   return LogementModel.emptyLogements;
+};
+
+/**
+ * @return {LogementModel}
+ */
+const catchErrorAndGiveANull = () => {
+  // console.error(new ErrorModel({ message: error.message }));
+  return LogementModel.null;
 };

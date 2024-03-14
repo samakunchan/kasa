@@ -52,6 +52,13 @@ export class LogementModel {
   }
 
   /**
+   * @param pictures {string[]}
+   */
+  set pictures(pictures) {
+    this._pictures = pictures;
+  }
+
+  /**
    * @return {String}
    */
   get description() {
@@ -63,6 +70,13 @@ export class LogementModel {
    */
   get host() {
     return this._host;
+  }
+
+  /**
+   * @param host {name: string, picture: toString}
+   */
+  set host(host) {
+    this._host = host;
   }
 
   /**
@@ -87,10 +101,24 @@ export class LogementModel {
   }
 
   /**
+   * @param equipments {string[]}
+   */
+  set equipments(equipments) {
+    this._equipments = equipments;
+  }
+
+  /**
    * @return {String[]}
    */
   get tags() {
     return this._tags;
+  }
+
+  /**
+   * @param tags {string[]}
+   */
+  set tags(tags) {
+    this._tags = tags;
   }
 
   /**
@@ -103,7 +131,7 @@ export class LogementModel {
   /**
    * @return {LogementModel}
    */
-  static get emptyLogement() {
+  static get null() {
     return null;
   }
 }
