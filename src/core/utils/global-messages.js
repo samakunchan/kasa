@@ -1,4 +1,6 @@
-export const globalMessages = {
+import { AboutModel } from '../models/about-model';
+
+export const aboutDatas = {
   fiability: {
     title: `Fiabilité`,
     content: `Les annonces postées sur Kasa garantissent une fiabilité totale. 
@@ -27,3 +29,9 @@ export const globalMessages = {
     Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.`,
   },
 };
+
+/**
+ * Les messges des la pages "a propos" en objet
+ * @type {AboutModel}
+ */
+export const aboutModel = new AboutModel(aboutDatas);
