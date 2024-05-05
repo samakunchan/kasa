@@ -1,3 +1,5 @@
+import { HostModel } from './host-model';
+
 export class LogementModel {
   constructor({
     id,
@@ -69,14 +71,7 @@ export class LogementModel {
    * @return {HostModel}
    */
   get host() {
-    return this._host;
-  }
-
-  /**
-   * @param host {name: string, picture: toString}
-   */
-  set host(host) {
-    this._host = host;
+    return new HostModel(this._host);
   }
 
   /**

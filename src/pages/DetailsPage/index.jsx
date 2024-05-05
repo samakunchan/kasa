@@ -12,7 +12,7 @@ import { getOneLogement } from '../../core/services/logementService';
  */
 const DetailsLogementPage = () => {
   const navigate = useNavigate();
-  const [logement, setLogement] = useState(LogementModel.emptyLogement);
+  const [logement, setLogement] = useState(LogementModel.null);
 
   const { id } = useParams();
 
